@@ -1,0 +1,1 @@
+A README file for chapter 7 - I doubt anything useful will ever go in here.
