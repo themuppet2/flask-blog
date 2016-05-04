@@ -3,7 +3,7 @@
 # imports
 from flask import Flask, render_template, request, session, \
 flash, redirect, url_for, g
-from functools import wrap
+from functools import wraps
 import sqlite3
 
 # configuration
@@ -46,6 +46,7 @@ def login():
     return render_template('login.html', error=error)
 
 @app.route('/main')
+@login_required
 def main():
     return render_template('main.html')
 
