@@ -34,7 +34,6 @@ def login_required(test):
 
 @app.route('/', methods=['GET', 'POST'])
 def login():
-    #flash(request.method)
     error = None
     if request.method == 'POST':
         if request.form['username'] != app.config['USERNAME'] or\
